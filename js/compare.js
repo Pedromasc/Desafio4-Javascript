@@ -1,4 +1,4 @@
-//car
+
 let carArr = [];
 
 class Car {
@@ -18,7 +18,7 @@ class Car {
     }
 } 
 
-// search on array if exist carClass returning 1 if not return -1
+
 function GetCarArrPosition(arr, carClass) {
     for(let i = 0; i < arr.length; i++){
         if(arr[i].nome  === carClass.nome)
@@ -27,7 +27,7 @@ function GetCarArrPosition(arr, carClass) {
     return -1;
 }
 
-// adiciona e remove uma classe de acordo com a marcação do checkbox
+
 function SetCarToCompare(el, carClass) {
    
     if(carClass instanceof Car){       
@@ -37,19 +37,16 @@ function SetCarToCompare(el, carClass) {
             let x = GetCarArrPosition(carArr, carClass)
             carArr.splice(x, 1);
         }
-
-    } else {
-        throw new Error("You need to set a Car Class");
-    }
+    } 
 }
 
-// se 2 checkbox estiverem marcados, ilustra a comparação
+
 function ShowCompare() {
     if(carArr.length < 2) {
-        alert("Por favor, marque 2 carros para apresentar a comparação.");
+        alert("Escolha dois carros para fazer a comparação ");
         return;
     } else if(carArr.length == 3) {
-        alert('Porfavor, compare 2 carros por vez.')
+        alert('Escolha dois carros por vez para comparação')
         throw new Error('Comparação somente de 2 em 2.')
     }
 
@@ -57,12 +54,12 @@ function ShowCompare() {
     document.getElementById("compare").style.display = "block";
 }
 
-// fecha a comparação
+
 function HideCompare(){
     document.getElementById("compare").style.display = "none";
 }
 
-// atualiza os valores da tabela de comparação de acordo com os objetos selecionados
+
 function UpdateCompareTable() {
     if(carArr.length > 1) {         
 

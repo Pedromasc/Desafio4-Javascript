@@ -3,7 +3,6 @@
 	margin: 0;
 	border: 0;
 	box-sizing: border-box;
-	font-family: arial;
 	list-style-type: none;
 	text-decoration: none;
 }
@@ -19,7 +18,7 @@ body {
 	height: 100%;
 	margin-bottom: 6rem;
 }
-/* CSS do header e footer das 3 páginas */
+
 .flex-header {
 	width: 100%;
 	margin: 0 auto;
@@ -50,19 +49,9 @@ nav {
 nav li {
 	margin-left: 1.6rem;
 }
-nav a {
-	color: #1351d8;
-	font-weight: bold;
-	font-size: 2.1rem;
-	text-decoration: none;
-	transition: .1s all;
-}
-nav a:hover {
-	font-size: 2.2rem; 
-	cursor: pointer;
-	color:	#0000CD;
-}
-/* css do rodapé */
+
+
+
 .flex-footer {
 	padding: 1rem 2rem;
 	position: fixed;
@@ -105,31 +94,3 @@ nav a:hover {
 	min-width: 3.5rem;
 }
 
-/* Design para mobiles. */
-@media screen and (max-width: 1300px) {
-	body, html, main, .flex-header, .flex-list, .flex-footer, .flex-social, div#compare {
-		width: auto;
-	}
-	.flex-list {
-		flex-flow: column wrap;
-	}
-	#carousel {	
-		height: 40rem;	
-		top: 100%;
-		transform: translateY(25%);	
-	}
-	.flex-main.selected {
-		width: 98%;
-	}
-	.flex-main img {
-		height: 30rem;
-	}
-	div#compare {
-		position: initial;
-		height: 100rem;
-	}
-	#c-table tr {
-		display: flex;
-		flex-flow: column nowrap;
-	}	
-}
